@@ -1,10 +1,11 @@
 import React from "react";
-import { Home, About, Header } from "./components";
+import { Home, About, Header, Courses } from "./components";
 
 const App = () => {
     const getPage = () => {
         const route = window.location.pathname;
         if (route === "/about") return <About />;
+        if (route === "/course") return <Courses />;
         return <Home />;
     };
 
