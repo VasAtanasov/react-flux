@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { CourseForm } from "../";
-import * as courseApi from "../../utils/api/courseApi";
-import { toast } from "react-toastify";
+import React, { useState, useEffect } from 'react';
+import { CourseForm } from '../';
+import * as courseApi from '../../utils/api/courseApi';
+import { toast } from 'react-toastify';
 
 const ManageCourseComponent = props => {
     const [errors, setErrors] = useState({});
     const [course, setCourse] = useState({
         id: null,
-        slug: "",
-        title: "",
+        slug: '',
+        title: '',
         authorId: null,
-        category: "",
+        category: ''
     });
 
     useEffect(() => {
@@ -23,16 +23,16 @@ const ManageCourseComponent = props => {
     function handleChange({ target }) {
         setCourse({
             ...course,
-            [target.name]: target.value,
+            [target.name]: target.value
         });
     }
 
     function formIsValid() {
         const _errors = {};
 
-        if (!course.title) _errors.title = "Title is required";
-        if (!course.authorId) _errors.authorId = "Author ID is required";
-        if (!course.category) _errors.category = "Category is required";
+        if (!course.title) _errors.title = 'Title is required';
+        if (!course.authorId) _errors.authorId = 'Author ID is required';
+        if (!course.category) _errors.category = 'Category is required';
 
         setErrors(_errors);
         // Form is valid if the errors object has no properties
@@ -43,8 +43,8 @@ const ManageCourseComponent = props => {
         event.preventDefault();
         if (!formIsValid()) return;
         courseApi.saveCourse(course).then(() => {
-            props.history.push("/courses");
-            toast.success("Course saved.");
+            props.history.push('/courses');
+            toast.success('Course saved.');
         });
     }
 

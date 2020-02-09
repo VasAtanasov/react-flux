@@ -1,8 +1,8 @@
-import React from "react";
-import CoursesComponent from "./Courses.component";
+import React from 'react';
+import CoursesComponent from './Courses.component';
 
 const Courses = () => {
-    return <CoursesComponent />;
+  return <CoursesComponent />;
 };
 
 export default Courses;

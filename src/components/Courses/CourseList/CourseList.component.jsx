@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const CourseListComponent = ({ courses }) => (
     <table className="table">
@@ -15,7 +15,7 @@ const CourseListComponent = ({ courses }) => (
             {courses.map(course => (
                 <tr key={course.id}>
                     <td>
-                        <Link to={"/course/" + course.slug}>
+                        <Link to={'/course/' + course.slug}>
                             {course.title}
                         </Link>
                     </td>
@@ -33,9 +33,9 @@ CourseListComponent.propTypes = {
             id: PropTypes.number.isRequired,
             title: PropTypes.string.isRequired,
             authorId: PropTypes.number.isRequired,
-            category: PropTypes.string.isRequired,
-        }),
-    ).isRequired,
+            category: PropTypes.string.isRequired
+        })
+    ).isRequired
 };
 
 export default CourseListComponent;
