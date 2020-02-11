@@ -2,9 +2,9 @@
   "courses": [
     {
       "id": 1,
-      "title": "Securing React Apps with Auth0",
+      "title": "02 COURSE INTRODUCTION",
       "slug": "react-auth0-authentication-security",
-      "authorId": 2,
+      "authorId": 1,
       "category": "JavaScript"
     },
     {
@@ -18,7 +18,7 @@
       "id": 3,
       "title": "Creating Reusable React Components",
       "slug": "react-creating-reusable-components",
-      "authorId": 2,
+      "authorId": 1,
       "category": "JavaScript"
     },
     {
